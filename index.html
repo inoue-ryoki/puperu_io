@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>発表</title>
+    <link href="style.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="header">
+
+
+        <!-- 黒の背景 -->
+        <div id="black"></div>
+        <!-- 雲 -->
+        <div id="cloud"></div>
+
+
+
+
+
+
+
+
+
+
+        <div class="logo">
+            <img src="img/logo2.png">
+        </div>
+        <!-- 爆発する場所 -->
+        <div class="field" id="field"></div>
+
+
+
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div id="torokko"><img src="img/ido.png"></div>
+
+    </div>
+
+
+    <main>
+
+
+
+
+        <div class="rubitti">
+            　<img src="img/rubi.png">
+
+            <div class="rubi">
+                <h3>星を見よう!</h3>
+            </div>
+        </div>
+
+
+        <button class="button" type="submit" id="fire">PUSH</button>
+
+
+
+
+        <div class="voice">
+
+            <div class="voice_img">
+
+                <img src="img/rubi.png">
+                <p>ルビッチ</p>
+            </div>
+            <div class="voice_left">
+                <p>プペル!どうしてボタン押すと雲が消えたの？？</p>
+
+            </div>
+        </div>
+        <div class="voice">
+
+
+            <div class="voice_right">
+                <p>jqueryのfadeOutを使いました。</p>
+
+            </div>
+            <div class="voice_img">
+
+                <img src="img/puperu.jpg">
+                <p>プペル</p>
+            </div>
+        </div>
+
+        <pre>$('button').click(function () {
+
+        $("#kumo").fadeOut(10000);  //10秒間かけて消える
+        })</pre>
+
+        <p>fadeInメソッドは要素を表示し、fadeOutメソッドは要素を非表示にします。
+            今回はfadeOutメソッドで雲がゆっくり消えていくようにしました。
+            文法は　<span>要素.fadeOut(速度);</span>になります。
+        </p>
+
+
+
+
+        <div class="voice">
+
+            <div class="voice_img">
+
+                <img src="img/rubi.png">
+                <p>ルビッチ</p>
+            </div>
+            <div class="voice_left">
+                <p>プペル!星はどうやって光らせてるの？</p>
+
+            </div>
+        </div>
+        <div class="voice">
+
+
+            <div class="voice_right">
+                <p>cssのアニメーションをつかってます</p>
+
+            </div>
+            <div class="voice_img">
+
+                <img src="img/puperu.jpg">
+                <p>プペル</p>
+            </div>
+        </div>
+
+
+        <pre>@keyframes move-twink {
+
+            from {background-position:0 0;}　　　//開始時の位置
+
+            to {background-position:-10000px 5000px;}  //終了時の位置
+        </pre>
+
+        <pre>
+            animation:move-twink 200s linear infinite;　　//一定速度で繰り返す
+        </pre>
+
+        <div class="voice">
+
+            <div class="voice_img">
+
+                <img src="img/rubi.png">
+                <p>ルビッチ</p>
+            </div>
+            <div class="voice_left">
+                <p>星の上で黒いもやが動いて星が消えたり点いたりしてるように見えるんだね</p>
+
+            </div>
+        </div>
+        <div class="voice">
+
+
+            <div class="voice_right">
+                <p>そうです。次はどうやって僕たちが空を飛んでるのか説明するです</p>
+
+            </div>
+            <div class="voice_img">
+
+                <img src="img/puperu.jpg">
+                <p>プペル</p>
+            </div>
+        </div>
+
+        <pre>
+
+
+        function puperu() {
+
+        $("#torokko").animate({
+
+        top: "300px",
+
+        left: "-500px"　 //要素を戻す位置 始点
+
+        }, 0).animate({
+
+        top: "500px",
+
+        left: "1500px"     //要素を動かす位置　終点
+
+        }, 20000);  //20秒の間に動く
+
+        puperu();   //ループ処理
+        }
+
+        puperu();    //関数の呼び出し
+    </pre>
+
+        <div class="voice">
+
+            <div class="voice_img">
+
+                <img src="img/rubi.png">
+                <p>ルビッチ</p>
+            </div>
+            <div class="voice_left">
+                <p>jqueryのanimateを使って動かしてるんだね</p>
+
+            </div>
+        </div>
+        <div class="voice">
+
+
+            <div class="voice_right">
+                <p>はい。animateメソッドとループ処理について説明させてください</p>
+
+            </div>
+            <div class="voice_img">
+
+                <img src="img/puperu.jpg">
+                <p>プペル</p>
+            </div>
+        </div>
+
+        <pre>.animate(<span>{ CSSプロパティ群}, [動作時間],</span> [イージング], [コールバック])</pre>
+
+        <p>animate()は、4つの引数をとります。CSSプロパティ群でアニメーション効果、動作時間でアニメーションの動作時間、イージングでアニメーションの動き方、コールバックでアニメーションが終わった後の処理をそれぞれ指定します。
+
+        animate()では、第一引数のパラメータ以外はすべてオプションです。今回は動作時間を指定しています</p>
+
+        <pre>
+            puperu();  //関数の中で呼び出すとループ処理される
+        </pre>
+
+        <p>関数は外で呼び出しているのですが、これだけだと一回の処理で終わっていました。
+            関数の中で呼び出してみるとループされました。関数が実行されたあとまた関数の
+            下で、puperu();を書くことによってまた実行されるみたいです。
+        </p>
+
+        <div class="voice">
+
+            <div class="voice_img">
+
+                <img src="img/rubi.png">
+                <p>ルビッチ</p>
+            </div>
+            <div class="voice_left">
+                <p>Web8期のみんな映画観てね！</p>
+
+            </div>
+
+
+        </div>
+        <div class="voice">
+
+
+            <div class="voice_right">
+                <p>夢を持った人は感動するから観てほしいです</p>
+
+            </div>
+            <div class="voice_img">
+
+                <img src="img/puperu.jpg">
+                <p>プペル</p>
+            </div>
+        </div>
+
+
+        <div class="post">
+
+            <img src="img/post.jpg">
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/kieru.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/bomb.js"></script>
+</body>
+
+</html>
