@@ -167,9 +167,37 @@ input, select {
 
 
 position: absolute;
-left: 400px;
+left: 350px;
 top:0;
 z-index: 6;
+}
+
+
+  main{
+    width: 900px;
+    margin: 0 auto;
+  text-align: center;
+
+
+  }
+
+@media(max-width:800px){
+  main{
+    width:400px;
+  }
+  .logo img{
+    width:50%;
+    position: absolute;
+left: 100px;
+top:10px;
+z-index: 6;
+
+  }
+
+  .rubitti img{
+    width: 200px;
+    height:200px;
+  }
 }
 
 
@@ -222,6 +250,15 @@ z-index: 6;
   width:350px;
   height:300px;
 }
+@media(max-width:800px){
+
+ #torokko img{
+  width:100px;
+  height:100px;
+}
+
+}
+
 
 
 
@@ -272,11 +309,31 @@ span{
     border-right: 15px solid gold;
   }
 
-  main{
-    width: 900px;
-    margin: 0 auto;
-  text-align: center;
 
+  @media(max-width:800px){
+
+.rubi{
+    position: relative;
+    top: 0px;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: #000;
+    font-size: 24px;
+    background: gold;
+
+}
+.rubi:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -15px;
+    border: 15px solid transparent;
+    border-right: 15px solid gold;
+  }
 
   }
 
@@ -311,6 +368,13 @@ span{
 .voice{
     display: flex;
     justify-content: center;
+
+}
+@media(max-width:800px){
+
+.voice{
+  width:100%;
+}
 
 }
 
@@ -381,6 +445,18 @@ span{
   text-align: center;
 }
 
+@media(max-width:800px){
+  main pre{
+    font-size: 10px;
+  }
+
+
+.voice p{
+  font-size: 12px;
+}
+
+}
+
 main p{
   font-size: 20px;
   text-align: left;
@@ -390,4 +466,13 @@ main p{
 .post img{
   width: 100%;
   height: 100%;
+}
+
+@media(max-width:800px){
+
+.post img{
+  width:300px;
+  height: auto;
+}
+
 }
