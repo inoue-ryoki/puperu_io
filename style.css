@@ -195,7 +195,7 @@ z-index: 6;
   }
 
   .rubitti img{
-    padding: 40px;
+    padding: 50px;
     width: 200px;
     height:200px;
   }
@@ -254,8 +254,8 @@ z-index: 6;
 @media(max-width:800px){
 
  #torokko img{
-  width:300px;
-  height:300px;
+  width:200px;
+  height:200px;
 }
 
 }
