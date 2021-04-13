@@ -30,7 +30,7 @@ puperu();
 
 function puperu() {
     $("#torokko").animate({
-        top: "500px",
+        top: "450px",
         left: "-600px"　//始点
     }, 0).animate({
         top: "300px",
