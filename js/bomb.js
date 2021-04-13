@@ -23,7 +23,7 @@ imgExplosion.src = "img/explosion.gif";
 imgExplosion.id = "explosion"
 imgExplosion.alt = "爆発";
 imgExplosion.setLoopCount = 1;
-imgExplosion.width = 1000;
+imgExplosion.width = 100;
 imgExplosion.height = 1000;
 
 
