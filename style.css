@@ -181,6 +181,10 @@ z-index: 6;
 
   }
 
+   .rubitti{
+     padding: 40px;
+  }
+
 @media(max-width:800px){
   main{
     width:400px;
@@ -193,6 +197,7 @@ top:10px;
 z-index: 6;
 
   }
+
 
   .rubitti img{
     padding: 50px;
